@@ -1,6 +1,6 @@
 /* 
 * Basic To Do List 
-*/ 
+*/
 
 // ask for input
 var ask = prompt("What would you like to do?");

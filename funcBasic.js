@@ -41,8 +41,8 @@ function makeCapital(str){
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-var input = prompt("Enter a String Value");
-var output = makeCapital(input);
+let input = prompt("Enter a String Value");
+let output = makeCapital(input);
 console.log(output);
 
 
@@ -56,7 +56,7 @@ function IsEven(numb){
     }
 }
 
-var entNumb = prompt("Enter a Number");
+let entNumb = prompt("Enter a Number");
 console.log(IsEven(entNumb));
 
 
