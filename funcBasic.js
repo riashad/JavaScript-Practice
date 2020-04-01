@@ -84,3 +84,35 @@ function KababToSnake(gvnStr){
 
 var newIn = prompt("Enter a String with 'Dash -' in it: ");
 console.log(KababToSnake(newIn));
+
+
+/***  Function Declaration & Expression ****/ 
+
+// Function Declaration
+function whatDoYouDo(name, job){
+    return name + job;
+}
+
+//Function Expression
+var kiKoroTumi = function(chakri, tomarNam){
+    switch(chakri){
+        case 'teacher':
+            return tomarNam + ' ami ekjon ' + chakri;
+            break;
+        case 'programmer':
+            return tomarNam + ' ami ekjon ' + chakri;
+            break;
+        case 'developer':
+            return tomarNam + ' ami ekjon ' + chakri;
+            break;
+        case 'doctor':
+            return tomarNam + ' ami ekjon ' + chakri;
+            break;
+        default:
+            return tomarNam + ' ekhono Student!';
+    }
+}
+
+console.log(kiKoroTumi('developer', 'Riashad Noor'));
+
+
