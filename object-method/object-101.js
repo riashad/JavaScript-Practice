@@ -17,6 +17,29 @@ booksObj.author = 'Humayun Ahmed';
 console.log(`Buy the book ${booksObj.title} by ${booksObj.author} and share the greatest writer's thoughts!`);
 
 
+
+var users2 = {
+    firstName:'Riashad',
+    lastName: 'Noor',
+    birthYear: 1990,
+    family: ['Chaity', 'Tishad', 'Anan'],
+    job:'web developer',
+    isMarried: true,
+    livesIn: 'Dhaka'
+    
+};
+
+console.log(users2);
+
+users2.job = 'Full Stack Developer';
+users2['livesIn'] = 'Shahbag, Dhaka';
+var isM = 'isMarried';
+users2[isM] = false;
+users2.family[2] = 'Uzan';
+
+console.log(users2);
+
+
 /* 
 * Task 
 * Name, age, location
