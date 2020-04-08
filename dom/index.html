@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .section2{
+            background-color: red;
+            color:white;
+        }
+
+        #btnShowHide {
+            background-color: tomato;
+            color: white;
+            font-weight: bold;
+            padding: 10px 10px;
+            border:tomato solid;
+        }
+        .invisible {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,11 +31,31 @@
         <li>Item 1</li>
         <li class="list-items">Item 2</li>
         <li class="list-items">Item 3</li>
+        <li>
+            <ol id="ordered-list">
+                <li class="items-list">Item 3.1</li>
+                <li class="items-list">Item 3.2</li>
+                <li class="items-list">Item 3.3</li>
+            </ol>
+        </li>
     </ul>
 
-    <p class="para-mod" id="para-1">First Paragraph</p>
-    <p class="para-mod" id="para-2">Second pAragraPh</p>
-    <p class="para-mod" id="para-3">THIRD ParagraPH</p>
+    <section class="section1">
+        <p class="para-mod" id="para-1">First Paragraph</p>
+        <p class="para-mod" id="para-2">Second pAragraPh</p>
+        <p class="para-mod" id="para-3">THIRD ParagraPH</p>
+    </section>
+
+    <section class="section2">
+        <p class="para-mod2" id="para-21">1 Paragraph</p>
+        <p class="para-mod2" id="para-22">2 pAragraPh</p>
+        <p class="para-mod2" id="para-23">3 ParagraPH</p>
+    </section>
+
+    <button id="btnShowHide">Show / Hide</button> 
+    <br>
+    <br>
+    <br>
     
     <input type="text" class="default-input" id="input-1" oninput="displayInput()" placeholder="Enter value...">
     <h3 id="show-output"></h3>
