@@ -123,3 +123,27 @@ const btnCall = document.querySelector('#btnShowHide');
 btnCall.addEventListener('click', function(){
     section.classList.toggle('invisible');
 }); 
+
+
+/**** Creating and Inserting Element ****/
+
+/** InnerHTML */
+
+// Ideal for changing the text/ content completely
+
+const diva = document.querySelector('div');
+diva.firstElementChild.innerHTML = 'I have changed using Inner HTML';
+
+// Adding an item or content is NOT IDEAL. Why ? just write anyting in input field and use the below code in browser console. U will see
+
+//diva.innerHTML = diva.innerHTML + '<p> I am newly added and made every thing re-rendered</p>';
+
+// For Adding new content withour relacing old one we can use insertAdjacentHTML(position, text)
+
+diva.insertAdjacentHTML("beforebegin", '<p>I am added before begin of the div!</p>');
+
+diva.insertAdjacentHTML('afterbegin','<p>I am added after the biginning of div</p>');
+
+diva.insertAdjacentHTML('beforeend','<p>I am added at the end of Div</p>');
+
+diva.insertAdjacentHTML('afterend', '<p>I am added after the div</p>');
