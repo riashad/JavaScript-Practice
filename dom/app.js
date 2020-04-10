@@ -147,3 +147,14 @@ diva.insertAdjacentHTML('afterbegin','<p>I am added after the biginning of div</
 diva.insertAdjacentHTML('beforeend','<p>I am added at the end of Div</p>');
 
 diva.insertAdjacentHTML('afterend', '<p>I am added after the div</p>');
+
+
+/** Adding item with createElement() method and appendChild() **/
+
+const newLi = document.createElement('li');
+
+ulList.appendChild(newLi);
+
+newLi.textContent = 'Item 4';
+
+
