@@ -154,7 +154,25 @@ diva.insertAdjacentHTML('afterend', '<p>I am added after the div</p>');
 const newLi = document.createElement('li');
 
 ulList.appendChild(newLi);
-
 newLi.textContent = 'Item 4';
 
+const newLi2 = document.createElement('li');
+ulList.prepend(newLi2);
+newLi2.textContent = 'Item 0'
 
+
+/** Cloaning a Node Element **/
+const mainUl = document.querySelector('ul');
+const newLi3 = document.querySelectorAll('li');
+const newliadd1 = newLi3[3].cloneNode(true);
+mainUl.append(newLi3, newliadd1);
+
+
+/** Removing a Node Element **/
+
+let aa = document.getElementById("top");
+let aa_nested = document.getElementById("nested");
+
+aa.removeChild(aa_nested);
+
+//mainUl.parentElement.removeChild(mainUl);
