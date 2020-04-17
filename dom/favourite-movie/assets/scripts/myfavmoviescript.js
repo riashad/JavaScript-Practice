@@ -19,14 +19,27 @@ const addButton = cancleButton.nextElementSibling;
 /** User Input Selection**/
 const userInputElemet = document.querySelectorAll('input');
 
+/** Update UI **/
+const hideEntryTextSection = document.querySelector('#entry-text');
+
 /** Clear Inputs **/
 const clearUserInputs = () => {
     for (const input of userInputElemet) {
         input.value = '';
     }
 };
-/** Movies Array **/
+/** Movies Array **/'#movie-list'
 const moviesLibrary = [];
+
+/** Hide old basic entry **/
+
+const updateUI = () => {
+    if(moviesLibrary.length === 0){
+        hideEntryTextSection.style.display = 'block';
+    }else{
+        hideEntryTextSection.style.display = 'none';
+    }
+};
 
 /** Getting inputs **/
 const AddMovieHandler = () => {
@@ -52,11 +65,12 @@ const AddMovieHandler = () => {
             moviesLibrary.push(newMovie);
             console.log(moviesLibrary);
             toggleMovieModalBtn();
-            clearUserInputs();     
+            clearUserInputs();
+            updateUI();     
        }
 };
 
-
+/** Show movies under Li element **/
 
 /** toggle to access css using classList  **/
 const toggleModalBackdrop = () => {
@@ -86,4 +100,5 @@ showBackdrop.addEventListener('click', backdropClickHandler);
 
 cancleButton.addEventListener('click', cancleButtonHandler);
 
-addButton.addEventListener('click', AddMovieHandler)
+addButton.addEventListener('click', AddMovieHandler);
+
