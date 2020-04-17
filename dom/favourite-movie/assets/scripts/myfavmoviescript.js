@@ -66,11 +66,27 @@ const AddMovieHandler = () => {
             console.log(moviesLibrary);
             toggleMovieModalBtn();
             clearUserInputs();
-            updateUI();     
+            updateUI();
+            renderNewMovieElement(newMovie.Movietitle, newMovie.Image, newMovie.UserRating);     
        }
 };
 
 /** Show movies under Li element **/
+const renderNewMovieElement = (mTitle, mImage, mRating) => {
+    const newMovieElement = document.createElement('li');
+    newMovieElement.className = 'movie-element';
+    newMovieElement.innerHTML = `
+    <div class="movie-element__image">
+        <img src="${mImage}" alt="${mTitle}">
+    </div>
+    <div class="movie-element__info">
+        <h2>${mTitle}</h2>
+        <p>${mRating}/5 stars</p>
+    </div>
+    `;
+    const listElementSelection = document.getElementById('movie-list');
+    listElementSelection.appendChild(newMovieElement);
+};
 
 /** toggle to access css using classList  **/
 const toggleModalBackdrop = () => {
