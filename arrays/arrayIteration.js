@@ -9,9 +9,20 @@ for(var i = 0; i<=names.length; i++){
 }
 
 /*
-*   Array Iteration using For Each() loop 
+*   Array Iteration using For of loop 
+
+*/
+for (const name of names) {
+    console.log(name);
+    
+}
+/*
+*   Multidimentional Array Iteration using For of loop 
 */
 
-array.forEach(element => {
-    
-});
+const data = [[1,6], [-5,25] ];
+for (const dataList of data) {
+    for (const dataAnalytics of dataList) {
+        console.log(dataAnalytics);
+    }
+}
