@@ -17,7 +17,7 @@ USE OBJECTS & METHODS
 
 var john = {
     name: 'John',
-    mass: 75,
+    mass: 80,
     height: 5.7,
     calBmi: function(){
         this.height = (this.height * 0.3048);
