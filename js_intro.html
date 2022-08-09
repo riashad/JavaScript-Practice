@@ -8,6 +8,7 @@
 </head>
 <body>
     <div>
+        <h3>CSS Modification Basic</h3><br>
         <p>What color do you like?</p>
         <span id="blue">Blue</span>
         <span id="green">Green</span>
@@ -16,7 +17,14 @@
         <button type="button" onclick="document.getElementById('blue').style.color='#0000ff'">I like blue</button>
         <button type="button" onclick="goGreen()">I like green</button>
         <button onclick="goRed()"> I like red</button>
+    </div><br>
+<hr><br>
+    <div>
+        <h3>Inner HTML Changing</h3><br>
+        <p id="tata">I am number One. I will be changed on clicking the button, how you don't forget me. Bye</p>
+        <button onclick="toBeChanged()">Bye Bye</button>
     </div>
+
 </body>
 <script>
     function goGreen(){
@@ -34,6 +42,10 @@
         document.getElementById('green').style.color ='black',
         document.getElementById('green').style.fontSize ='16px'
 
+    }
+
+    function toBeChanged(){
+        document.getElementById('tata').innerHTML ="Hello there! I'm Number Two. Hope you have met my elder brother, Number One."
     }
 </script>
 </html>
