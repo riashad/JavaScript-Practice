@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Intorduction</title>
+</head>
+<body>
+    <div>
+        <p>What color do you like?</p>
+        <span id="blue">Blue</span>
+        <span id="green">Green</span>
+        <span id="red">Red</span>
+
+        <button type="button" onclick="document.getElementById('blue').style.color='#0000ff'">I like blue</button>
+        <button type="button" onclick="goGreen()">I like green</button>
+        <button onclick="goRed()"> I like red</button>
+    </div>
+</body>
+<script>
+    function goGreen(){
+        document.getElementById('blue').style.color ='black',
+        document.getElementById('red').style.color = 'black',
+        document.getElementById('red').style.fontWeight = 'normal',
+        document.getElementById('green').style.color='green',
+        document.getElementById('green').style.fontSize='24px'
+    }
+
+    function goRed(){
+        document.getElementById('red').style.color = 'red',
+        document.getElementById('red').style.fontWeight = 'bold',
+        document.getElementById('blue').style.color ='black',
+        document.getElementById('green').style.color ='black',
+        document.getElementById('green').style.fontSize ='16px'
+
+    }
+</script>
+</html>
