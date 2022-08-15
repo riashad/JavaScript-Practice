@@ -18,34 +18,34 @@
         <button type="button" onclick="goGreen()">I like green</button>
         <button onclick="goRed()"> I like red</button>
     </div><br>
-<hr><br>
+    <hr><br>
     <div>
         <h3>Inner HTML Changing</h3><br>
         <p id="tata">I am number One. I will be changed on clicking the button, how you don't forget me. Bye</p>
         <button onclick="toBeChanged()">Bye Bye</button>
     </div>
 
+    <script>
+        function goGreen(){
+            document.getElementById('blue').style.color ='black',
+            document.getElementById('red').style.color = 'black',
+            document.getElementById('red').style.fontWeight = 'normal',
+            document.getElementById('green').style.color='green',
+            document.getElementById('green').style.fontSize='24px'
+        }
+    
+        function goRed(){
+            document.getElementById('red').style.color = 'red',
+            document.getElementById('red').style.fontWeight = 'bold',
+            document.getElementById('blue').style.color ='black',
+            document.getElementById('green').style.color ='black',
+            document.getElementById('green').style.fontSize ='16px'
+    
+        }
+    
+        function toBeChanged(){
+            document.getElementById('tata').innerHTML ="Hello there! I'm Number Two. Hope you have met my elder brother, Number One."
+        }
+    </script>
 </body>
-<script>
-    function goGreen(){
-        document.getElementById('blue').style.color ='black',
-        document.getElementById('red').style.color = 'black',
-        document.getElementById('red').style.fontWeight = 'normal',
-        document.getElementById('green').style.color='green',
-        document.getElementById('green').style.fontSize='24px'
-    }
-
-    function goRed(){
-        document.getElementById('red').style.color = 'red',
-        document.getElementById('red').style.fontWeight = 'bold',
-        document.getElementById('blue').style.color ='black',
-        document.getElementById('green').style.color ='black',
-        document.getElementById('green').style.fontSize ='16px'
-
-    }
-
-    function toBeChanged(){
-        document.getElementById('tata').innerHTML ="Hello there! I'm Number Two. Hope you have met my elder brother, Number One."
-    }
-</script>
 </html>
