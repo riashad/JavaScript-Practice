@@ -6,9 +6,15 @@
 body {
     font-size: 15px;
 }
+
+#heading {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
 .board-el  {
     width: 500px;
-    height: 330px;
+    height: 400px;
     background: rgba(15,31,117,1);
     opacity: 1;
     position: relative;
