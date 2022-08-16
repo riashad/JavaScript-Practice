@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Part 1</title>
+</head>
+<body>
+    <h1>JavaScript Practice Part 1</h1>
+
+    <h2>Variable Practice</h2>
+    <p id="name-el"></p> <button id="show-name" onclick="showName()">Show Name</button>
+    <button id="hide-name" onclick="hideName()" style="visibility: hidden;">Hide Name</button>
+
+    <script>
+    // Create two variables, firstName and lastName
+    let firstName = "Riashad";
+    let lastName = "Noor";
+    // Concatenate the two variables into a third variable called fullName
+    let fullName = firstName +" "+ lastName;
+    // Log fullName to the console
+    console.log(fullName);
+
+    function showName(){
+        document.getElementById('name-el').style.visibility = "visible";
+        document.getElementById('name-el').innerText = fullName;
+        document.getElementById('show-name').style.visibility = "hidden";
+        document.getElementById('show-name').style.display = "none";
+        document.getElementById('hide-name').style.visibility = "visible";
+    }
+
+    function hideName(){
+        document.getElementById('name-el').style.visibility = "hidden";
+        document.getElementById('hide-name').style.display = "none";
+        document.getElementById('hide-name').style.visibility = "hidden";
+        document.getElementById('show-name').style.visibility = "visible";
+        document.getElementById('show-name').style.display = "block";
+    }
+    </script>
+    
+    <hr>
+
+    <h1>Increment and Decrement</h1>
+
+    <script>
+
+        let myPoints = 0;
+
+        // Create two functions, add3Points() and remove1Point(), and have them
+        function add3Points() {
+            myPoints +=3;
+        }
+        function remove1Point() {
+            myPoints -=1;
+        }
+        // add/remove points to/from the myPoints variable
+        add3Points();
+        add3Points();
+        add3Points();
+        remove1Point();
+        remove1Point();
+        remove1Point();
+        add3Points();
+        add3Points();
+        add3Points();
+        remove1Point();
+        remove1Point();
+        remove1Point();
+        remove1Point();
+        remove1Point();
+        // Call the functions to that the line below logs out 10
+        console.log(myPoints); 
+
+        // Try to predict what each of the lines will log out
+        console.log("2" + 2) // 22
+        console.log(11 + 7) // 18
+        console.log(6 + "5") // 65
+        console.log("My points: " + 5 + 9) //My Point: 59
+        console.log(2 + 2) //  4
+        console.log("11" + "14") // 1114 
+
+    </script>
+
+    <hr>
+
+    <h1>Rendering an Error</h1>
+
+    <div class="product-el">
+        <img src="https://i.ebayimg.com/images/g/6zMAAOSwntNh100G/s-l500.jpg" alt="Adidas Shoe" srcset="" width="50%">
+        <h3>Adidas Shoe</h3>
+        <p id="purchase-error" style="visibility:hidden; display: none;"></p>
+        <button id="buy-btn" onclick="showError()">Purchase Now $149</button>
+    </div>
+
+    <script>
+        // When the user clicks the purchase button, render out
+        // "Something went wrong, please try again" in the paragraph
+        // that has the id="error".
+        let errorMessage = document.getElementById('purchase-error');
+
+        function showError(){
+            errorMessage.innerText = "⚠️ Something went wrong, please try again!";
+            errorMessage.style.visibility = "visible";
+            errorMessage.style.display = "block";
+        }
+
+
+    </script>
+    <style>
+    .product-el {
+        border: 5px solid greenyellow;
+        padding: 20px 20px;
+    }
+    button#buy-btn {
+        color: black;
+        border: 1px solid #000;
+        padding: 10px 20px;
+        border-radius: 25px;
+        background: #fff;
+        font-weight: 600;
+    }
+    #purchase-error {
+        background: red;
+        color: #fff;
+        padding: 10px 10px;
+    }
+    </style>
+
+    <hr>
+    <h1>Simple Calculator</h1>
+
+    <div class="calc-el">
+        <span id="num1-el"></span>
+        <span id="num2-el"></span>
+        <br>
+        <br>
+        <button class="calc-btn" onclick="add()">Add</button>
+        <button class="calc-btn" onclick="subtract()">Subtract</button>
+        <button class="calc-btn" onclick="divide()">Division</button>
+        <button class="calc-btn" onclick="multiply()">Multiply</button>
+        <br>
+        <br>
+        Result: <span id="result-el">0</span>
+    </div>
+
+    <script>
+
+        let num1 = 40;
+        let num2 = 11;
+
+        document.getElementById('num1-el').textContent = num1;
+        document.getElementById('num2-el').textContent = num2;
+        // Create four functions: add(), subtract(), divide(), multiply()
+        function add() {
+            let jog = num1 + num2;
+            document.getElementById('result-el').textContent = jog;
+        }
+
+        function subtract(){
+            let biog = num1 - num2;
+            document.getElementById('result-el').textContent = biog;
+        }
+
+        function divide() {
+            let vag = num1 / num2;
+            document.getElementById('result-el').innerText = vag;
+
+        }
+
+        function multiply() {
+            let gun = num1 * num2;
+            document.getElementById('result-el').innerHTML = gun;
+        }
+        // Call the correct function when the user clicks on one of the buttons
+        // Perform the given calculation using num1 and num2
+        // Render the result of the calculation in the paragraph with id="sum-el"
+
+        // E.g. if the user clicks on the "Plus" button, you should render
+        // "Sum: 10" (since 8 + 2 = 10) inside the paragraph with id="sum-el"
+
+
+    </script>
+    <style>
+        .calc-el {
+            border: 5px solid greenyellow;
+            padding: 20px 20px; 
+            text-align: center;
+            font-size: 24px;
+        }
+
+        #num1-el, #num2-el, #result-el {
+            font-size: 24px;
+            border-bottom: 2px solid #000;
+        }
+        .calc-btn {
+            color: black;
+            border: 1px solid #000;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: #fff;
+            font-weight: 600;
+        }
+    </style>
+</body>
+</html>
