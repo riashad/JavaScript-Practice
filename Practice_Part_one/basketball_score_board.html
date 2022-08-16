@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Aldrichs&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="basketball_score_board.css">
+    </head>
+   <body>
+      <div class="board-el">
+         <div id="datetime">
+            Date: <span class="datetime" id="date-el"></span><br>
+            Time: <span class="datetime" id="time-el"></span>
+         </div>
+         <div id="title-el">
+            <span id="home">HOME</span>
+            <span id="away">AWAY</span>
+         </div>
+         <div id="scorecard-el">
+            <span id="homecard-el">00</span>
+            <span id="awaycard-el">00</span>
+         </div>
+         <div id="scoreupdate-el">
+            <span id="homescore-btn">
+                <button class="hbtns" onclick="hone()">+1</button>
+                <button class="hbtns" onclick="htwo()">+2</button>
+                <button class="hbtns" onclick="hthree()">+3</button>
+            </span>   
+            <span id="awayscore-btn">
+                <button class="hbtns" onclick="aone()">+1</button>
+                <button class="hbtns" onclick="atwo()">+2</button>
+                <button class="hbtns" onclick="athree()">+3</button>
+            </span>   
+         </div>
+      </div>
+   </body>
+   <script src="basketball_score_board.js"></script>
+</html>

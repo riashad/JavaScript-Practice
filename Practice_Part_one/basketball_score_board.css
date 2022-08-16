@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    font-family: inter;
+    color: #fff;
+}
+body {
+    font-size: 15px;
+}
+.board-el  {
+    width: 500px;
+    height: 330px;
+    background: rgba(15,31,117,1);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    vertical-align: middle;
+    /* margin-left: 50%; */
+}
+
+#datetime {
+    text-align: center;
+    padding-top: 20px;
+    clear: both;
+}
+
+#title-el {
+    padding: 25px;
+    clear: both;
+}
+
+#home {
+    float: left;
+    padding-left: 18%;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#away {
+    float: right;
+    padding-right: 20%;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#scorecard-el {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    clear: both;
+    font-family: "Aldrich";
+    clear: both;
+}
+
+#homecard-el {
+    font-family: "Aldrich";
+    color: red;
+    float: left;
+    margin-left: 12%;
+    padding: 20px 20px;
+    font-size: 64px;
+    font-weight: bold;
+    border: 3px #fff solid;
+    background: #000;
+    border-radius: 15px;
+    height: 120px;
+    width: 120px;
+    
+}
+
+#awaycard-el {
+    font-family: "Aldrich";
+    color: red;
+    float: right;
+    margin-right: 12%;
+    padding: 20px 20px;
+    font-size: 64px;
+    font-weight: bold;
+    border: 3px #fff solid;
+    background: #000;
+    border-radius: 15px;
+    height: 120px;
+    width: 120px;
+
+}
+
+#scoreupdate-el, #homescore-btn, #awayscore-btn {
+    font-family: "Aldrich";
+}
+
+.hbtns { 
+    margin-top: 2%;
+    margin-left: 0%;
+
+}
+.abtns { 
+}
+#homescore-btn {
+    padding-left: 16%;
+}
+
+#awayscore-btn {
+    padding-left: 16%;
+}
+
+.hbtns,.abtns {
+    background: rgba(255, 255, 255, 0);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+}
+
