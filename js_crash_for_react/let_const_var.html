@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let & Const</title>
+</head>
+<body>
+    <code style="background: yellow; color: black;">The oputput will be displayed in console panel of your browser</code>
+
+    <h4>    ES6 introducted <code>let</code></h4>    
+    <p>    1. <code>let</code> can't be redecleared</p>
+    <p>    2. <code>let</code> must be decleared before use.</p>
+    <p>    3. <code>let</code> can be decleared inside a block (block scope) but can't be accessed outside the block - {} - </p>
+
+    <br>
+    <h4>    ES6 introducted <code>const</code></h4>    
+
+    <p>1. <code>const</code> can't be redecleared</p>
+    <p>2. <code>const</code> can't be reassigned</p>
+    <p>3. <code>const</code> can be used inside block {} scope</p>
+    <p>4. <code>const</code> can't be used outside block scope</p>
+
+
+
+</body>
+<script>
+    //1. We can't redeclear - let - variables 
+    let x = "Riashad";
+   // let x = 0; // I am commented because I cause syntax error, remove comment from me to see the error in console 
+    console.log(x); //Uncaught SyntaxError: Identifier 'x' has already been declared 
+
+    //but we can redelear - var - variables
+    var y = "I am decleared as y - variable using 'var' Riashad";
+    var y = "I am re-decleared as y - variable using 'var' Noor";
+    console.log(y);
+
+
+    //3. let -value can't be accessed outside block
+    {
+        let xx = 600;
+        var yy = 660;
+    }
+    // console.log(xx); //  I am commented because I cause Uncaught ReferenceError: xx is not defined
+    console.log("Var value can be called outside block scope: "+yy);
+
+    let number = 9;
+    //Ternaries Operators
+    function isEven(number){
+        const even = number % 2 == 0;
+        if(even){
+            // return true;
+            console.log("I am even: "+ number);
+        }else{
+            console.log("I am odd: "+ number);
+            // return false;
+        }
+    }
+</script>
+</html>
